@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { LandingHeader } from "../../Components/General/Header";
 import { MdArrowOutward, MdOutlineStar } from "react-icons/md";
 

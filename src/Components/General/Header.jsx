@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Logo from "./main-Logo.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
@@ -12,6 +12,7 @@ const MainHeader = () => {
     { name: "Contracts & Equity", path: "" },
     //{ name: "Messages", path: "" },
   ];
+
   return (
     <header className="flex  justify-between items-center py-5 px-5 border-b border-gray-300">
       <Link to={"/requests"} className="font-semibold w-20 text-primary">
@@ -35,9 +36,11 @@ const MainHeader = () => {
 };
 
 export const LandingHeader = () => {
+  const navigate = useNavigate();
+
   const nav = [
-    { name: "Startup requests", path: "" },
-    { name: "Find Professionals", path: "" },
+    { name: "Startup requests", path: "/requests" },
+    { name: "Find Professionals", path: "/professionals" },
     //{ name: "Contracts & Equity", path: "" },
     //{ name: "Messages", path: "" },
   ];
@@ -47,20 +50,24 @@ export const LandingHeader = () => {
         <ul className=" text-sm font-medium flex gap-10">
           {nav.map((nav) => (
             <li className="cursor-pointer">
-              {" "}
-              <NavLink>{nav.name}</NavLink>{" "}
+              <NavLink to={nav.path}>{nav.name}</NavLink>{" "}
             </li>
           ))}
         </ul>
       </nav>
 
       <div className="font-semibold w-20 text-primary ">
-        <img src={Logo} alt="Logo" />
+        <img
+          className="cursor-pointer"
+          onClick={() => navigate("/")}
+          src={Logo}
+          alt="Logo"
+        />
       </div>
       <div className=" flex gap-2 ">
-        {/* <button className="py-3 px-10 flex items-center w-fit text-white bg-primary rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
+        <button className="py-3 px-10 flex items-center w-fit text-white bg-primary rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
           <p className="text-xs">Login</p>
-        </button> */}
+        </button>
         <button className="p-3 flex items-center w-fit border border-primary  rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
           <MdArrowOutward />
           <p className="text-xs">Get Early Access</p>
