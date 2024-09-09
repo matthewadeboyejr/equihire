@@ -4,29 +4,32 @@ import { MdArrowOutward, MdOutlineStar } from "react-icons/md";
 
 const Landing = () => {
   return (
-    <div className="md:px-20 px-5 space-y-14 py-14 ">
+    <div className="md:px-20 px-5  py-14 ">
       <LandingHeader />
 
-      <section className="border-b-4 border-b-primary bg-white rounded-lg md:p-32  py-32 px-10   ">
+      <section className="md:p-32  py-32 px-10   ">
         <div className=" space-y-5 text-center">
-          <h1 className="md:text-7xl text-3xl font-black bg-gradient-to-r  from-black via-black to-primary inline-block  text-transparent bg-clip-text ">
-            Hire professionals, <br /> Pay with equity
+          <h1 className="md:text-7xl text-3xl font-semibold   flex flex-col space-y-3">
+            {/* The Future of Work for Startups:
+            <br />  */}
+            <span>Hire Experts, </span>
+            <span> Pay with Equity, Scale Fast. </span>
           </h1>
-          <p className="text-sm  flex justify-center  tracking-wide">
+          {/* <p className="text-sm  flex justify-center  tracking-wide">
             Connect with top professionals who are ready to invest in your
             vision.
             <br /> Exchange equity for expert services.
-          </p>
+          </p> */}
 
           <form className="flex justify-center  ">
-            <div className="bg-white md:w-2/3 w-full border border-black flex  justify-between rounded-full ">
+            <div className="bg-white md:w-1/3 w-full border-2  flex  justify-between rounded-full ">
               <input
-                className="placeholder:text-sm w-full px-5 rounded-full outline-none"
+                className="placeholder:text-lg placeholder:text-secondary  w-full px-5  rounded-full outline-none"
                 placeholder="Search by skills or role"
               />
               <button
                 //to={"/login"}
-                className=" bg-primary  m-2 rounded-full py-4 px-6 text-white text-xs font-medium hover:scale-110 transition-all"
+                className=" bg-secondary  m-2 rounded-full py-2 px-3 text-white text-sm font-medium hover:scale-110 transition-all"
               >
                 Search
               </button>
@@ -34,87 +37,9 @@ const Landing = () => {
           </form>
         </div>
       </section>
-      {/*    <section className="border-b-4 border-b-primary bg-white rounded-lg md:p-32  py-32 px-10  flex ">
-        <div>
-          <h1 className="md:text-7xl text-3xl font-medium bg-gradient-to-r  from-black via-black to-primary inline-block  text-transparent bg-clip-text border-b ">
-            FIND THE RIGHT
-            <br /> PROFESSIONALS,
-            <br /> PAY WITH EQUITY
-          </h1>
-          <div className="flex gap-20 items-center">
-            <p>MISSION</p>
-            <p className="text-sm  flex justify-center  tracking-wide">
-              Connect startup with top professionals who are ready to invest in
-              your vision.Exchange equity for expert services.
-            </p>
-          </div>
-        </div>
-
-        <div className=""></div>
-      </section> */}
-
-      {/*  <section className="mt-10">
-        <p className=" text-center text-4xl tracking-tighter ">
-          All you have to do to start,
-          <span className="font-bold"> SHARE</span>
-        </p>
-
-        <div className="grid md:grid-cols-3 gap-10 mt-14 md:mx-28 border-2 border-b-4 border-black bg-white rounded-md py-16 px-16">
-          <div className="flex flex-col items-center gap-4">
-            <p className="w-7 h-7 rounded-full border border-black  flex items-center justify-center">
-              1
-            </p>
-            <p className="text-sm flex flex-col items-center gap-2  text-center">
-              <span className="font-semibold">Create an Account</span>
-              <span className="">
-                Create an account and setup profile as a startup or professional
-              </span>
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center gap-4">
-            <p className="w-7 h-7 rounded-full border border-black  flex items-center justify-center">
-              2
-            </p>
-            <p className="text-sm flex flex-col items-center gap-2  text-center">
-              <span className="font-semibold text-nowrap">
-                Verified/Validate Account
-              </span>
-              <span className="">
-                Upload document to verified startup or professional{" "}
-              </span>
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center gap-4">
-            <p className="w-7 h-7 rounded-full border border-black  flex items-center justify-center">
-              3
-            </p>
-            <p className="text-sm flex flex-col items-center gap-2">
-              <span className="font-semibold text-nowrap">
-                Create/Accept request
-              </span>
-              <span className=" text-center">
-                As a startup you can create a request or accept request as a
-                professional{" "}
-              </span>
-            </p>
-          </div>
-
-          <div className="flex gap-2 place-self-center md:col-span-3 mt-10">
-            <button className="p-3 flex items-center w-fit  bg-primary rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
-              <p className="text-xs">Sign up for free</p>
-            </button>
-            <button className="p-3 flex items-center w-fit border border-primary  rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
-              <MdArrowOutward />
-              <p className="text-xs">Learn More</p>
-            </button>
-          </div>
-        </div>
-      </section> */}
 
       <section className=" ">
-        <div className="flex  flex-col  md:flex-row ">
+        <div className="flex flex-col  md:flex-row ">
           <div className="md:w-1/2   rounded-l-md overflow-auto  ">
             <img
               className="h-full  "
@@ -124,15 +49,15 @@ const Landing = () => {
 
           <div className="flex flex-col gap-5 md:w-1/2 bg-primary/10 rounded-r-md py-16 px-16">
             <p className=" text-center text-4xl tracking-tighter ">
-              All you have to do to start,
-              <span className="font-bold"> SHARE</span>
+              Forget upfront costs - connect with top professionals who believe
+              in your vision
             </p>
             <div className="flex items-center gap-4">
               <p className="w-7 h-7 rounded-full border border-black  flex items-center justify-center">
                 1
               </p>
               <p className="text-sm flex flex-col  ">
-                <span className="font-semibold">Create an Account</span>
+                <span className="font-semibold text-lg">Create an Account</span>
                 <span className="">
                   Create an account and setup profile as a startup or
                   professional
@@ -144,7 +69,9 @@ const Landing = () => {
                 2
               </p>
               <p className="text-sm flex flex-col  ">
-                <span className="font-semibold">Verified/Validate Account</span>
+                <span className="font-semibold text-lg">
+                  Verified/Validate Account
+                </span>
                 <span className="">
                   Upload document to verified startup or professional
                 </span>
@@ -155,7 +82,9 @@ const Landing = () => {
                 3
               </p>
               <p className="text-sm flex flex-col  ">
-                <span className="font-semibold">Create/Accept request</span>
+                <span className="font-semibold text-lg">
+                  Create/Accept request
+                </span>
                 <span className="">
                   As a startup you can create a request or accept request as a
                   professional
@@ -164,12 +93,12 @@ const Landing = () => {
             </div>
 
             <div className="flex gap-2 mt-10">
-              <button className="p-3 flex items-center w-fit text-white bg-primary rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
-                <p className="text-xs">Sign up for free</p>
+              <button className="p-3 flex items-center w-fit text-white text-sm bg-secondary rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
+                <p className="">Sign up for free</p>
               </button>
-              <button className="p-3 flex items-center w-fit border border-primary  rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
+              <button className="p-3 text-sm flex items-center w-fit border border-secondary  rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
                 <MdArrowOutward />
-                <p className="text-xs">Learn More</p>
+                <p className="">Learn More</p>
               </button>
             </div>
           </div>
@@ -177,7 +106,7 @@ const Landing = () => {
       </section>
 
       <section className=" flex md:flex-row flex-col space-y-10  bg-white p-10 rounded-md">
-        <div className="flex flex-col gap-2  justify-center text-sm px-10  ">
+        <div className="flex flex-col gap-2  justify-center px-10  ">
           <h3 className="font-semibold">Explore Available Professional</h3>
           <p>
             This are varified professionals ready to work with you on equity
@@ -317,7 +246,7 @@ const Landing = () => {
         </div>
       </section>
       <section className=" flex md:flex-row flex-col space-y-10 bg-primary/10 p-10 rounded-md">
-        <div className="flex flex-col gap-2  justify-center text-sm px-10  ">
+        <div className="flex flex-col gap-2  justify-center  px-10  ">
           <h3 className="font-semibold">Explore Startup request</h3>
           <p>This are varified startup ready to work with you on equity base</p>
           <button className="p-3 flex items-center w-fit  bg-black text-white rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">

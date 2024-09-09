@@ -47,7 +47,7 @@ export const LandingHeader = () => {
   return (
     <header className="flex items-center justify-between   md:px-10  ">
       <nav className=" hidden md:block">
-        <ul className=" text-sm font-medium flex gap-10">
+        <ul className=" text-lg font-medium flex gap-10">
           {nav.map((nav) => (
             <li className="cursor-pointer">
               <NavLink to={nav.path}>{nav.name}</NavLink>{" "}
@@ -56,7 +56,7 @@ export const LandingHeader = () => {
         </ul>
       </nav>
 
-      <div className="font-semibold w-20 text-primary ">
+      <div className="font-semibold w-20 text-primary  ">
         <img
           className="cursor-pointer"
           onClick={() => navigate("/")}
@@ -65,10 +65,10 @@ export const LandingHeader = () => {
         />
       </div>
       <div className=" flex gap-2 ">
-        <button className="py-3 px-10 flex items-center w-fit text-white bg-primary rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
-          <p className="text-xs">Login</p>
+        <button className="py-3 px-10 flex items-center w-fit text-white text-sm bg-[#004E64] rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
+          <p className="">Login</p>
         </button>
-        <button className="p-3 flex items-center w-fit border border-primary  rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
+        <button className="p-3 flex items-center w-fit border border-secondary  rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
           <MdArrowOutward />
           <p className="text-xs">Get Early Access</p>
         </button>
