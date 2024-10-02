@@ -65,7 +65,10 @@ export const LandingHeader = () => {
         />
       </div>
       <div className=" flex gap-2 ">
-        <button className="py-3 px-10 flex items-center w-fit text-white text-sm bg-[#004E64] rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
+        <button
+          onClick={() => navigate("/login")}
+          className="py-3 px-10 flex items-center w-fit text-white text-sm bg-[#004E64] rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2"
+        >
           <p className="">Login</p>
         </button>
         <button className="p-3 flex items-center w-fit border border-secondary  rounded-md gap-2 font-medium hover:scale-105 transition-all hover:border-b-2">
